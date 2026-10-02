@@ -38,13 +38,13 @@ def delete_student():
     delete_roll = int(input("Enter roll number to delete: "))
 
     cursor.execute("""
-                 DELETE FROM students
-                    WHERE roll_no = ?
-                """, (delete_roll,))
+        DELETE FROM students
+        WHERE roll_no = ?
+        """, (delete_roll,))
 
-conn.commit()
+    conn.commit()
 
-print("Student deleted successfully!")
+    print("Student deleted successfully!")
 
 
 
